@@ -9,7 +9,7 @@ class LinkedList:
         element = None
         next_node = None
 
-        def __init__(self, element, next_node = None):
+        def __init__(self, element, next_node=None):
             self.element = element
             self.next_node = next_node
 
@@ -17,7 +17,7 @@ class LinkedList:
     def append(self, element):
         if not self.head:
             self.head = self.Node(element)
-            return
+            return element
         node = self.head
 
         while node.next_node:
@@ -138,7 +138,7 @@ def main():
     linked_list.append(5)
     linked_list.insert(22, 6)
     linked_list.get(-5)
-    linked_list.delete(-5)
-    linked_list.out(-5)
+    linked_list.delete()
+    linked_list.out()
 if __name__ == '__main__':
     main()    
